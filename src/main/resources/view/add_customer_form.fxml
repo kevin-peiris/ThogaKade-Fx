@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+   <children>
+      <Pane layoutY="96.0" prefHeight="336.0" prefWidth="600.0" style="-fx-background-color: #74b9ff;">
+         <children>
+            <JFXTextField fx:id="txtId" layoutX="193.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Id">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" layoutX="193.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" layoutX="193.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPhoneNumber" layoutX="193.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="203.0" layoutY="268.0" onAction="#btnAddCustomerOnAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6c5ce7;" text="Add Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="genderCombo" layoutX="193.0" layoutY="40.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
+            <DatePicker fx:id="dob" layoutX="193.0" layoutY="212.0" prefHeight="30.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Pane prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #0984e3;">
+         <children>
+            <Label layoutX="164.0" layoutY="24.0" text="Add Customer Form" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
