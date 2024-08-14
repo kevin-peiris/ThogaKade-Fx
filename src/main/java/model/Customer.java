@@ -1,12 +1,13 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
+@ToString
 public class Customer {
     private String id;
     private String title;
@@ -14,4 +15,6 @@ public class Customer {
     private String address;
     private String number;
     private LocalDate dob;
+
+
 }

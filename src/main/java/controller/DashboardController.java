@@ -1,5 +1,6 @@
 package controller;
 
+import db.ThogakadePOS;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,10 +34,16 @@ public class DashboardController {
 
     @FXML
     void btnViewCustomerFormOnAction(ActionEvent event) {
-
+        new ThogakadePOS().getInstance().printCustomer();
     }
 
     public void btnUpdateCustomerFormOnAction(ActionEvent actionEvent) {
-
+        Stage stage=new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/update_customer_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

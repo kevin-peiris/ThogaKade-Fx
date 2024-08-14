@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class AddCustomerFormController implements Initializable {
-    private static int customerCount=1;
+    private static int customerCount=1; //Used to count the customers to generate the customerId
 
     @FXML
     private DatePicker dob;
@@ -39,7 +39,7 @@ public class AddCustomerFormController implements Initializable {
     private JFXTextField txtPhoneNumber;
 
     @FXML
-    void btnAddCustomerOnAction(ActionEvent event) {
+    void btnAddCustomerOnAction(ActionEvent event) { //Adds the customer into the system
 
         Customer customer = new Customer(txtId.getText(), comboTitles.getValue(), txtName.getText(), txtAddress.getText(), txtPhoneNumber.getText(), dob.getValue());
         System.out.println(customer);
@@ -65,7 +65,7 @@ public class AddCustomerFormController implements Initializable {
         generateCusId();
     }
 
-    private void generateCusId(){ //Generates the customer Id
+    private void generateCusId(){ //Generates the customerId
         String id=String.format("C%03d",customerCount);
         txtId.setText(id);
     }
