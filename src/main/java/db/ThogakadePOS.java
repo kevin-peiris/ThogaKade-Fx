@@ -1,5 +1,7 @@
 package db;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.Customer;
 
 import java.util.ArrayList;
@@ -42,5 +44,19 @@ public class ThogakadePOS {
                 customerList.set(i,updatedCustomer);
             }
         }
+    }
+
+    public void deleteCustomer(Customer customer){
+        customerList.remove(customer);
+    }
+
+    public ObservableList<Customer> viewCustomers() {
+        ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
+
+        customerList.forEach(obj->{
+            customerObservableList.add(obj);
+        });
+
+        return customerObservableList;
     }
 }

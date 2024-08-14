@@ -12,10 +12,9 @@ import javafx.scene.control.DatePicker;
 import model.Customer;
 
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class UpdateCustomerFormController implements Initializable {
+public class DeleteCustomerFormController implements Initializable {
     private Customer searchCustomer;
     private ThogakadePOS thogakadePOS=new ThogakadePOS().getInstance();
 
@@ -39,6 +38,31 @@ public class UpdateCustomerFormController implements Initializable {
 
     @FXML
     private JFXTextField txtSearch;
+
+    @FXML
+    void btnDeleteCustomerOnAction(ActionEvent event) {
+        if (searchCustomer!=null){
+            thogakadePOS.deleteCustomer(searchCustomer); //Searched Customer object is sent to the ThogakadePOS to be deleted
+
+            txtId.setText("");
+            txtName.setText("");
+            txtAddress.setText("");
+            txtPhoneNumber.setText("");
+            comboTitles.setValue("");
+            dob.setValue(null);
+            txtSearch.setText("");
+            searchCustomer=null;
+        }else {
+            txtId.setText("Search For A Customer");
+            txtName.setText("Search For A Customer");
+            txtAddress.setText("Search For A Customer");
+            txtPhoneNumber.setText("Search For A Customer");
+            comboTitles.setValue("");
+            dob.setValue(null);
+            txtSearch.setText("");
+        }
+
+    }
 
     @FXML
     void btnSearchCustomerOnAction(ActionEvent event) {
@@ -67,36 +91,6 @@ public class UpdateCustomerFormController implements Initializable {
     @FXML
     public void searchCustomerOnAction(ActionEvent actionEvent) { //If text area of search customer is entered customer can be also found
         btnSearchCustomerOnAction(actionEvent);
-    }
-
-    @FXML
-    void btnUpdateCustomerOnAction(ActionEvent event) {
-        if (searchCustomer!=null){
-            searchCustomer.setName(txtName.getText());
-            searchCustomer.setAddress(txtAddress.getText());
-            searchCustomer.setNumber(txtPhoneNumber.getText());
-            searchCustomer.setDob(dob.getValue());
-            searchCustomer.setTitle(comboTitles.getValue());
-
-            thogakadePOS.updateCustomer(searchCustomer); //Updated Customer object is sent to the ThogakadePOS
-
-            txtId.setText("");
-            txtName.setText("");
-            txtAddress.setText("");
-            txtPhoneNumber.setText("");
-            comboTitles.setValue("");
-            dob.setValue(null);
-            txtSearch.setText("");
-            searchCustomer=null;
-        }else {
-            txtId.setText("Search For A Customer");
-            txtName.setText("Search For A Customer");
-            txtAddress.setText("Search For A Customer");
-            txtPhoneNumber.setText("Search For A Customer");
-            comboTitles.setValue("");
-            dob.setValue(null);
-            txtSearch.setText("");
-        }
     }
 
     @Override
