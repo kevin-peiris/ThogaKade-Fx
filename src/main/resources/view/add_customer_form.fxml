@@ -9,27 +9,26 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
    <children>
       <Pane layoutY="96.0" prefHeight="336.0" prefWidth="600.0" style="-fx-background-color: #74b9ff;">
          <children>
-            <JFXTextField fx:id="txtId" layoutX="193.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Id">
+            <JFXTextField fx:id="txtId" editable="false" layoutX="193.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Id" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtName" layoutX="193.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name">
+            <JFXTextField fx:id="txtName" layoutX="193.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtAddress" layoutX="193.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address">
+            <JFXTextField fx:id="txtAddress" layoutX="193.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtPhoneNumber" layoutX="193.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number">
+            <JFXTextField fx:id="txtPhoneNumber" layoutX="193.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
@@ -39,7 +38,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXComboBox fx:id="genderCombo" layoutX="193.0" layoutY="40.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
+            <JFXComboBox fx:id="comboTitles" layoutX="193.0" layoutY="40.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
             <DatePicker fx:id="dob" layoutX="193.0" layoutY="212.0" prefHeight="30.0" prefWidth="200.0" />
          </children>
       </Pane>
