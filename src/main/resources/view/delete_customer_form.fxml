@@ -33,23 +33,23 @@
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtName" layoutX="196.0" layoutY="155.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK">
+            <JFXTextField fx:id="txtName" editable="false" layoutX="196.0" layoutY="155.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtAddress" layoutX="196.0" layoutY="195.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address" unFocusColor="BLACK">
+            <JFXTextField fx:id="txtAddress" editable="false" layoutX="196.0" layoutY="195.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtPhoneNumber" layoutX="196.0" layoutY="235.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number" unFocusColor="BLACK">
+            <JFXTextField fx:id="txtPhoneNumber" editable="false" layoutX="196.0" layoutY="235.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox fx:id="comboTitles" layoutX="196.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
-            <DatePicker fx:id="dob" layoutX="196.0" layoutY="287.0" prefHeight="30.0" prefWidth="200.0" />
+            <JFXComboBox fx:id="comboTitles" disable="true" layoutX="196.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
+            <DatePicker fx:id="dob" disable="true" layoutX="196.0" layoutY="287.0" prefHeight="30.0" prefWidth="200.0" />
             <Label layoutX="111.0" layoutY="78.0" text="CusId">
                <font>
                   <Font name="Agency FB Bold" size="28.0" />

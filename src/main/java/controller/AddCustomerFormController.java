@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 public class AddCustomerFormController implements Initializable {
     private static int customerCount=1; //Used to count the customers to generate the customerId
+    private ThogakadePOS thogakadePOS=new ThogakadePOS().getInstance();
 
     @FXML
     private DatePicker dob;
@@ -40,19 +41,30 @@ public class AddCustomerFormController implements Initializable {
 
     @FXML
     void btnAddCustomerOnAction(ActionEvent event) { //Adds the customer into the system
+        if (txtName.getText().equals("") || txtAddress.getText().equals("")  || txtPhoneNumber.getText().equals("") || dob.getValue()==null || comboTitles.getValue()==null){
+            thogakadePOS.noticeViewer("Empty Field or Fields");
+        } else if (txtPhoneNumber.getText().charAt(0)!='0' || txtPhoneNumber.getText().length()!=10) {
+            thogakadePOS.noticeViewer("Invalid Phone Number");
+            txtPhoneNumber.requestFocus();
+            txtPhoneNumber.selectAll();
+        } else{
 
-        Customer customer = new Customer(txtId.getText(), comboTitles.getValue(), txtName.getText(), txtAddress.getText(), txtPhoneNumber.getText(), dob.getValue());
-        System.out.println(customer);
+            Customer customer = new Customer(txtId.getText(), comboTitles.getValue(), txtName.getText(), txtAddress.getText(), txtPhoneNumber.getText(), dob.getValue());
+            System.out.println(customer);
 
-        new ThogakadePOS().getInstance().addCustomer(customer);
+            thogakadePOS.addCustomer(customer);
 
-        customerCount++;
-        generateCusId();
-        txtName.setText("");
-        txtAddress.setText("");
-        txtPhoneNumber.setText("");
-        comboTitles.setValue("");
-        dob.setValue(null);
+            customerCount++;
+            generateCusId();
+            txtName.setText("");
+            txtAddress.setText("");
+            txtPhoneNumber.setText("");
+            comboTitles.setValue("");
+            dob.setValue(null);
+
+            thogakadePOS.noticeViewer("Customer Added Successfully");
+            txtName.requestFocus();
+        }
     }
 
     @Override
@@ -63,6 +75,7 @@ public class AddCustomerFormController implements Initializable {
         comboTitles.setItems(titles);
 
         generateCusId();
+        txtName.requestFocus();
     }
 
     private void generateCusId(){ //Generates the customerId

@@ -53,15 +53,20 @@ public class UpdateCustomerFormController implements Initializable {
             dob.setValue(searchCustomer.getDob());
 
             txtSearch.setText("");
+
+            thogakadePOS.noticeViewer("Customer Found");
         }else{
-            txtId.setText("Customer Not Found");
-            txtName.setText("Customer Not Found");
-            txtAddress.setText("Customer Not Found");
-            txtPhoneNumber.setText("Customer Not Found");
+            txtId.setText("");
+            txtName.setText("");
+            txtAddress.setText("");
+            txtPhoneNumber.setText("");
             comboTitles.setValue(null);
             dob.setValue(null);
-        }
 
+            thogakadePOS.noticeViewer("Customer Not Found");
+            txtSearch.requestFocus();
+            txtSearch.selectAll();
+        }
     }
 
     @FXML
@@ -88,14 +93,21 @@ public class UpdateCustomerFormController implements Initializable {
             dob.setValue(null);
             txtSearch.setText("");
             searchCustomer=null;
+
+            thogakadePOS.noticeViewer("Customer Updated Successfully");
+            txtSearch.requestFocus();
+            txtSearch.selectAll();
         }else {
-            txtId.setText("Search For A Customer");
-            txtName.setText("Search For A Customer");
-            txtAddress.setText("Search For A Customer");
-            txtPhoneNumber.setText("Search For A Customer");
+            txtId.setText("");
+            txtName.setText("");
+            txtAddress.setText("");
+            txtPhoneNumber.setText("");
             comboTitles.setValue("");
             dob.setValue(null);
-            txtSearch.setText("");
+
+            thogakadePOS.noticeViewer("First Search for a Customer");
+            txtSearch.requestFocus();
+            txtSearch.selectAll();
         }
     }
 

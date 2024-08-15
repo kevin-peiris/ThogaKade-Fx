@@ -52,13 +52,19 @@ public class SearchCustomerFormController implements Initializable {
             dob.setValue(searchCustomer.getDob());
 
             txtSearch.setText("");
+
+            thogakadePOS.noticeViewer("Customer Found");
         }else{
-            txtId.setText("Customer Not Found");
-            txtName.setText("Customer Not Found");
-            txtAddress.setText("Customer Not Found");
-            txtPhoneNumber.setText("Customer Not Found");
+            txtId.setText("");
+            txtName.setText("");
+            txtAddress.setText("");
+            txtPhoneNumber.setText("");
             comboTitles.setValue(null);
             dob.setValue(null);
+
+            thogakadePOS.noticeViewer("Customer Not Found");
+            txtSearch.requestFocus();
+            txtSearch.selectAll();
         }
 
     }

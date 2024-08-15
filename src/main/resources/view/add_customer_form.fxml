@@ -33,7 +33,7 @@
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXButton layoutX="203.0" layoutY="268.0" onAction="#btnAddCustomerOnAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #0984e3;" text="Add Customer" textFill="WHITE">
+            <JFXButton layoutX="203.0" layoutY="268.0" onAction="#btnAddCustomerOnAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #00cec9;" text="Add Customer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

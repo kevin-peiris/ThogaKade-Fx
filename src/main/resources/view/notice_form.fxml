@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="171.0" prefWidth="216.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NoticeFormController">
+   <children>
+      <Pane layoutY="40.0" prefHeight="129.0" prefWidth="216.0" style="-fx-background-color: #81ecec;">
+         <children>
+            <JFXButton layoutX="76.0" layoutY="85.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="65.0" style="-fx-background-color: #00cec9;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblNotice" alignment="TOP_CENTER" layoutY="14.0" prefHeight="51.0" prefWidth="216.0" text="Hi">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #00cec9;">
+         <children>
+            <Label layoutX="76.0" layoutY="2.0" text="Notice" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
