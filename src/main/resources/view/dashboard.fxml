@@ -10,38 +10,38 @@
 
 <AnchorPane prefHeight="421.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <children>
-      <Pane layoutX="416.0" prefHeight="98.0" prefWidth="330.0" style="-fx-background-color: #27ae60;">
+      <Pane layoutX="416.0" prefHeight="98.0" prefWidth="330.0" style="-fx-background-color: #00cec9;">
          <children>
-            <Label layoutX="92.0" layoutY="24.0" text="Dashboard" textFill="#c46411">
+            <Label layoutX="92.0" layoutY="24.0" text="Dashboard" textFill="WHITE">
                <font>
                   <Font name="Agency FB Bold" size="40.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="416.0" layoutY="98.0" prefHeight="322.0" prefWidth="330.0" style="-fx-background-color: #2ecc71;">
+      <Pane layoutX="416.0" layoutY="98.0" prefHeight="322.0" prefWidth="330.0" style="-fx-background-color: #81ecec;">
          <children>
-            <JFXButton layoutX="53.0" layoutY="14.0" onAction="#btnAddCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #e67e22;" text="Add Customer Form" textFill="WHITE">
+            <JFXButton layoutX="53.0" layoutY="14.0" onAction="#btnAddCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #00cec9;" text="Add Customer Form" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="53.0" layoutY="186.0" onAction="#btnViewCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #e67e22;" text="View Customer Form" textFill="WHITE">
+            <JFXButton layoutX="53.0" layoutY="186.0" onAction="#btnViewCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #00cec9;" text="View Customer Form" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="53.0" layoutY="129.0" onAction="#btnDeleteCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #e67e22;" text="Delete Customer Form" textFill="WHITE">
+            <JFXButton layoutX="53.0" layoutY="129.0" onAction="#btnDeleteCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #00cec9;" text="Delete Customer Form" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="53.0" layoutY="245.0" onAction="#btnSearchCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #e67e22;" text="Search Customer Form" textFill="WHITE">
+            <JFXButton layoutX="53.0" layoutY="245.0" onAction="#btnSearchCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #00cec9;" text="Search Customer Form" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="53.0" layoutY="71.0" onAction="#btnUpdateCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #e67e22;" text="Update Customer Form" textFill="WHITE">
+            <JFXButton layoutX="53.0" layoutY="71.0" onAction="#btnUpdateCustomerFormOnAction" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #00cec9;" text="Update Customer Form" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomerFormController">
    <children>
-      <Pane layoutY="84.0" prefHeight="330.0" prefWidth="600.0" style="-fx-background-color: #74b9ff;">
+      <Pane layoutY="84.0" prefHeight="330.0" prefWidth="600.0" style="-fx-background-color: #81ecec;">
          <children>
             <TableView fx:id="tblCustomer" layoutX="22.0" layoutY="7.0" prefHeight="189.0" prefWidth="556.0">
                <columns>
@@ -23,14 +22,14 @@
                   <TableColumn fx:id="colDOB" minWidth="6.39996337890625" prefWidth="113.5999755859375" text="DOB" />
                </columns>
             </TableView>
-            <JFXButton layoutX="253.0" layoutY="233.0" onAction="#btnReloadOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #6c5ce7;" text="Reload" textFill="WHITE">
+            <JFXButton layoutX="253.0" layoutY="233.0" onAction="#btnReloadOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #00cec9;" text="Reload" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
          </children>
       </Pane>
-      <Pane layoutY="-12.0" prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #0984e3;">
+      <Pane layoutY="-12.0" prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #00cec9;">
          <children>
             <Label layoutX="158.0" layoutY="24.0" text="View Customer Form" textFill="WHITE">
                <font>

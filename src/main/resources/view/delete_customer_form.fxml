@@ -9,51 +9,80 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteCustomerFormController">
    <children>
-      <Pane layoutY="96.0" prefHeight="394.0" prefWidth="600.0" style="-fx-background-color: #74b9ff;">
+      <Pane layoutY="96.0" prefHeight="394.0" prefWidth="600.0" style="-fx-background-color: #81ecec;">
          <children>
-            <JFXTextField fx:id="txtId" editable="false" layoutX="200.0" layoutY="69.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Id" unFocusColor="BLACK">
-               <font>
-                  <Font name="Agency FB Bold" size="20.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtName" layoutX="200.0" layoutY="149.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK">
-               <font>
-                  <Font name="Agency FB Bold" size="20.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtAddress" layoutX="200.0" layoutY="189.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address" unFocusColor="BLACK">
-               <font>
-                  <Font name="Agency FB Bold" size="20.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtPhoneNumber" layoutX="200.0" layoutY="229.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number" unFocusColor="BLACK">
-               <font>
-                  <Font name="Agency FB Bold" size="20.0" />
-               </font>
-            </JFXTextField>
-            <JFXButton layoutX="210.0" layoutY="337.0" onAction="#btnDeleteCustomerOnAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6c5ce7;" text="Delete Customer" textFill="WHITE">
+            <JFXButton layoutX="210.0" layoutY="337.0" onAction="#btnDeleteCustomerOnAction" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #00cec9;" text="Delete Customer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXComboBox fx:id="comboTitles" layoutX="200.0" layoutY="109.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
-            <DatePicker fx:id="dob" layoutX="200.0" layoutY="281.0" prefHeight="30.0" prefWidth="200.0" />
             <JFXTextField fx:id="txtSearch" layoutX="254.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#searchCustomerOnAction" prefHeight="40.0" prefWidth="200.0" promptText="Search Customer" unFocusColor="BLACK">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </JFXTextField>
-            <JFXButton layoutX="146.0" layoutY="14.0" onAction="#btnSearchCustomerOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #6c5ce7;" text="Search" textFill="WHITE">
+            <JFXButton layoutX="146.0" layoutY="14.0" onAction="#btnSearchCustomerOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #00cec9;" text="Search" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
+            <JFXTextField fx:id="txtId" editable="false" layoutX="196.0" layoutY="75.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Id" unFocusColor="BLACK">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" layoutX="196.0" layoutY="155.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" layoutX="196.0" layoutY="195.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Address" unFocusColor="BLACK">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPhoneNumber" layoutX="196.0" layoutY="235.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Phone Number" unFocusColor="BLACK">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboTitles" layoutX="196.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0" promptText="Select title Mr. Mrs." />
+            <DatePicker fx:id="dob" layoutX="196.0" layoutY="287.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label layoutX="111.0" layoutY="78.0" text="CusId">
+               <font>
+                  <Font name="Agency FB Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="118.0" text="Title">
+               <font>
+                  <Font name="Agency FB Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="110.0" layoutY="158.0" text="Name">
+               <font>
+                  <Font name="Agency FB Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="198.0" text="Address">
+               <font>
+                  <Font name="Agency FB Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="235.0" text="Phone Num.">
+               <font>
+                  <Font name="Agency FB Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="285.0" text="D.O.B">
+               <font>
+                  <Font name="Agency FB Bold" size="28.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Pane prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #0984e3;">
+      <Pane prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #00cec9;">
          <children>
             <Label layoutX="147.0" layoutY="24.0" text="Delete Customer Form" textFill="WHITE">
                <font>
