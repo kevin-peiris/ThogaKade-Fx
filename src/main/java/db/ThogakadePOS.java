@@ -19,22 +19,18 @@ public class ThogakadePOS {
     private List<Customer> customerList;
 
     public ThogakadePOS(){
-        customerList=new ArrayList<>();
+        customerList=new ArrayList<>(); // ArrayList is Initialized
     }
 
     public ThogakadePOS getInstance(){
-        return null==instance?instance=new ThogakadePOS():instance;
+        return null==instance?instance=new ThogakadePOS():instance; // Returns the instance
     }
 
-    public void addCustomer(Customer customer){
+    public void addCustomer(Customer customer){ //Adds Customer objects to the arraylist
         customerList.add(customer);
     }
 
-    public void printCustomer(){
-        System.out.println(customerList);
-    }
-
-    public Customer searchCustomer(String search) {
+    public Customer searchCustomer(String search) { //Search Customer objects from the arraylist
         for (Customer customer:customerList){
             if (customer.getId().equals(search) | customer.getName().equals(search) | customer.getAddress().equals(search)){
                 return customer;
@@ -43,7 +39,7 @@ public class ThogakadePOS {
         return null;
     }
 
-    public void updateCustomer(Customer updatedCustomer){
+    public void updateCustomer(Customer updatedCustomer){ //Updates Customer objects in the arraylist
         Customer customer;
         for (int i = 0; i<customerList.size(); i++) {
             customer=customerList.get(i);
@@ -53,11 +49,11 @@ public class ThogakadePOS {
         }
     }
 
-    public void deleteCustomer(Customer customer){
+    public void deleteCustomer(Customer customer){ //Delets Customer objects in the arraylist
         customerList.remove(customer);
     }
 
-    public ObservableList<Customer> viewCustomers() {
+    public ObservableList<Customer> viewCustomers() { //ObservableList type of the ArrayList is returned
         ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
 
         customerList.forEach(obj->{
@@ -67,7 +63,7 @@ public class ThogakadePOS {
         return customerObservableList;
     }
 
-    public void noticeViewer(String message){
+    public void noticeViewer(String message){ //Notice Window Intialized with the display message
         Stage stage=new Stage();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/notice_form.fxml"))));

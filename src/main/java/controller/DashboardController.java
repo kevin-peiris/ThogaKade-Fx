@@ -56,7 +56,7 @@ public class DashboardController {
     }
 
     @FXML
-    void btnViewCustomerFormOnAction(ActionEvent event) {
+    void btnViewCustomerFormOnAction(ActionEvent event) { //Opens the FXML file for view customer form
         Stage stage=new Stage();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/view_customer_form.fxml"))));

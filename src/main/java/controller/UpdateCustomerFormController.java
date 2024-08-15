@@ -42,9 +42,9 @@ public class UpdateCustomerFormController implements Initializable {
 
     @FXML
     void btnSearchCustomerOnAction(ActionEvent event) {
-        searchCustomer=thogakadePOS.searchCustomer(txtSearch.getText());
+        searchCustomer=thogakadePOS.searchCustomer(txtSearch.getText()); // Assigns a Customer object if found
 
-        if (searchCustomer!=null){
+        if (searchCustomer!=null){  //Checks if a customer is found
             txtId.setText(searchCustomer.getId());
             txtName.setText(searchCustomer.getName());
             txtAddress.setText(searchCustomer.getAddress());
@@ -54,7 +54,7 @@ public class UpdateCustomerFormController implements Initializable {
 
             txtSearch.setText("");
 
-            thogakadePOS.noticeViewer("Customer Found");
+            thogakadePOS.noticeViewer("Customer Found"); //Notice is Displayed
         }else{
             txtId.setText("");
             txtName.setText("");
@@ -63,7 +63,7 @@ public class UpdateCustomerFormController implements Initializable {
             comboTitles.setValue(null);
             dob.setValue(null);
 
-            thogakadePOS.noticeViewer("Customer Not Found");
+            thogakadePOS.noticeViewer("Customer Not Found"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
         }
@@ -94,7 +94,7 @@ public class UpdateCustomerFormController implements Initializable {
             txtSearch.setText("");
             searchCustomer=null;
 
-            thogakadePOS.noticeViewer("Customer Updated Successfully");
+            thogakadePOS.noticeViewer("Customer Updated Successfully"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
         }else {
@@ -105,7 +105,7 @@ public class UpdateCustomerFormController implements Initializable {
             comboTitles.setValue("");
             dob.setValue(null);
 
-            thogakadePOS.noticeViewer("First Search for a Customer");
+            thogakadePOS.noticeViewer("First Search for a Customer"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
         }
@@ -113,7 +113,7 @@ public class UpdateCustomerFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> titles= FXCollections.observableArrayList();
+        ObservableList<String> titles= FXCollections.observableArrayList(); // Initializes the values of the combo box
         titles.add("Mr.");
         titles.add("Mrs.");
         comboTitles.setItems(titles);

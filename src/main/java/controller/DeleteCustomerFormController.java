@@ -53,7 +53,7 @@ public class DeleteCustomerFormController implements Initializable {
             txtSearch.setText("");
             searchCustomer=null;
 
-            thogakadePOS.noticeViewer("Customer Deleted Successfully");
+            thogakadePOS.noticeViewer("Customer Deleted Successfully"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
         }else {
@@ -64,7 +64,7 @@ public class DeleteCustomerFormController implements Initializable {
             comboTitles.setValue("");
             dob.setValue(null);
 
-            thogakadePOS.noticeViewer("First Search for a Customer");
+            thogakadePOS.noticeViewer("First Search for a Customer"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
 
@@ -74,7 +74,7 @@ public class DeleteCustomerFormController implements Initializable {
 
     @FXML
     void btnSearchCustomerOnAction(ActionEvent event) {
-        searchCustomer=thogakadePOS.searchCustomer(txtSearch.getText());
+        searchCustomer=thogakadePOS.searchCustomer(txtSearch.getText()); // Assigns a Customer object if found
 
         if (searchCustomer!=null){
             txtId.setText(searchCustomer.getId());
@@ -86,7 +86,7 @@ public class DeleteCustomerFormController implements Initializable {
 
             txtSearch.setText("");
 
-            thogakadePOS.noticeViewer("Customer Found");
+            thogakadePOS.noticeViewer("Customer Found"); //Notice is Displayed
         }else{
             txtId.setText("");
             txtName.setText("");
@@ -95,7 +95,7 @@ public class DeleteCustomerFormController implements Initializable {
             comboTitles.setValue(null);
             dob.setValue(null);
 
-            thogakadePOS.noticeViewer("Customer Not Found");
+            thogakadePOS.noticeViewer("Customer Not Found"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
         }
@@ -109,7 +109,7 @@ public class DeleteCustomerFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> titles= FXCollections.observableArrayList();
+        ObservableList<String> titles= FXCollections.observableArrayList(); // Initializes the values of the combo box
         titles.add("Mr.");
         titles.add("Mrs.");
         comboTitles.setItems(titles);

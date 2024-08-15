@@ -41,7 +41,7 @@ public class SearchCustomerFormController implements Initializable {
 
     @FXML
     void btnSearchCustomerOnAction(ActionEvent event) {
-        searchCustomer=thogakadePOS.searchCustomer(txtSearch.getText());
+        searchCustomer=thogakadePOS.searchCustomer(txtSearch.getText()); // Assigns a Customer object if found
 
         if (searchCustomer!=null){
             txtId.setText(searchCustomer.getId());
@@ -53,7 +53,7 @@ public class SearchCustomerFormController implements Initializable {
 
             txtSearch.setText("");
 
-            thogakadePOS.noticeViewer("Customer Found");
+            thogakadePOS.noticeViewer("Customer Found"); //Notice is Displayed
         }else{
             txtId.setText("");
             txtName.setText("");
@@ -62,7 +62,7 @@ public class SearchCustomerFormController implements Initializable {
             comboTitles.setValue(null);
             dob.setValue(null);
 
-            thogakadePOS.noticeViewer("Customer Not Found");
+            thogakadePOS.noticeViewer("Customer Not Found"); //Notice is Displayed
             txtSearch.requestFocus();
             txtSearch.selectAll();
         }
@@ -76,7 +76,7 @@ public class SearchCustomerFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> titles= FXCollections.observableArrayList();
+        ObservableList<String> titles= FXCollections.observableArrayList(); // Initializes the values of the combo box
         titles.add("Mr.");
         titles.add("Mrs.");
         comboTitles.setItems(titles);

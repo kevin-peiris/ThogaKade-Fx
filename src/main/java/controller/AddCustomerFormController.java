@@ -40,7 +40,7 @@ public class AddCustomerFormController implements Initializable {
     private JFXTextField txtPhoneNumber;
 
     @FXML
-    void btnAddCustomerOnAction(ActionEvent event) { //Adds the customer into the system
+    void btnAddCustomerOnAction(ActionEvent event) {
         if (txtName.getText().equals("") || txtAddress.getText().equals("")  || txtPhoneNumber.getText().equals("") || dob.getValue()==null || comboTitles.getValue()==null){
             thogakadePOS.noticeViewer("Empty Field or Fields");
         } else if (txtPhoneNumber.getText().charAt(0)!='0' || txtPhoneNumber.getText().length()!=10) {
@@ -52,24 +52,24 @@ public class AddCustomerFormController implements Initializable {
             Customer customer = new Customer(txtId.getText(), comboTitles.getValue(), txtName.getText(), txtAddress.getText(), txtPhoneNumber.getText(), dob.getValue());
             System.out.println(customer);
 
-            thogakadePOS.addCustomer(customer);
+            thogakadePOS.addCustomer(customer); //Customer object is sent back to the ArrayList
 
             customerCount++;
-            generateCusId();
+            generateCusId(); //CustomerId is generated
             txtName.setText("");
             txtAddress.setText("");
             txtPhoneNumber.setText("");
             comboTitles.setValue("");
             dob.setValue(null);
 
-            thogakadePOS.noticeViewer("Customer Added Successfully");
+            thogakadePOS.noticeViewer("Customer Added Successfully"); //Notice is displayed
             txtName.requestFocus();
         }
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) { //Adds the values to the tile ComboBox
-        ObservableList<String> titles= FXCollections.observableArrayList();
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> titles= FXCollections.observableArrayList(); // Initializes the values of the combo box
         titles.add("Mr.");
         titles.add("Mrs.");
         comboTitles.setItems(titles);

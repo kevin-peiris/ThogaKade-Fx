@@ -33,7 +33,7 @@ public class ViewCustomerFormController {
     private TableView<Customer> tblCustomer;
 
     @FXML
-    void btnReloadOnAction(ActionEvent event) {
+    void btnReloadOnAction(ActionEvent event) { //Reloads the customer data back to the table
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
